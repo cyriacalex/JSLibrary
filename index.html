@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="UTF-8">
+        <Title>Add Book to Library</Title>      
+        
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <form action="index.html" method="GET">
+            <label>Title</label>
+            <input type="text" name="title" id="title" />
+            <label>Author</label>
+            <input type="text" name="author" id="author"/>
+            <label>Genre</label>
+            <input type="text" name="genre" id="genre"/>
+            <label>Year</label>
+            <input type="text" name="year" id="year" />
+            <label>Number of Pages</label>
+            <input type="text" name="numOfPages" id="numOfPages"/>
+            <input type="submit" name="submitBook" value="AddBooktoLibrary" id="submitBook" onclick="addBookToLibrary()"/>
+        </form>
+        <script src="library.js" type="module"></script>
+    </body>
+    </html>
