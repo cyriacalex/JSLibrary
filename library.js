@@ -1,17 +1,23 @@
-import { Book, displayBookInfo } from 'file:///C:/Users/Alex/Desktop/JSpractice/Library/book.js';
-console.log('hello');
+import { Book } from './book.js';
 let myLibrary = [];
-//const book = require('book.js');
 
-addBookToLibrary();
+//document.getElementById('submitBook').addEventListener('click', function() {
+document.getElementById('submitBook').addEventListener('click', function(e) {
+    addBookToLibrary();
+    myLibrary.forEach(book => console.log(book));
+})
 
 function addBookToLibrary() {
-    let bookToAdd = new Book();
-
-    bookToAdd.title = document.getElementById("title").textContent;
-    bookToAdd.author = document.getElementById("author").textContent;
-    bookToAdd.year = document.getElementById("year").textContent;
-    bookToAdd.genre = document.getElementById("genre").textContent;
-    bookToAdd.numOfPages = document.getElementById("numOfPages").textContent;
+    let title = document.getElementById("title").value;   
+    let author = document.getElementById("author").value;
+    let genre = document.getElementById("genre").value;
+    let year = document.getElementById("year").value;
+    let numOfPages = document.getElementById("numOfPages").value;
+     
+    let bookToAdd = new Book(title, author, genre, year, numOfPages);
+  
+    bookToAdd.displayBookInfo();
+    myLibrary.push(bookToAdd);
 }
-console.log(displayBookInfo(bookToAdd));
+ 
+

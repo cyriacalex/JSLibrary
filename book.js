@@ -1,22 +1,14 @@
 class Book {
-    constructor() {
-        title,
-            author,
-            genre,
-            year,
-            numOfPages
-    }
-    /*constructor(title, author, genre, year, numOfPages){
+    constructor(title, author, genre, year, numOfPages){
       this.title = title;
         this.author = author;
         this.genre = genre;
         this.year = year;
         this.numOfPages = numOfPages; 
-    }*/
+    }
 
-
+displayBookInfo() {
+    console.log(`Title: ${this.title}\nAuthor: ${this.author}\nGenre: ${this.genre}\nYear: ${this.year}\nNo. of Pages: ${this.numOfPages}`);
 }
-function displayBookInfo(book) {
-    console.log(`Title: ${book.title}\nAuthor: ${book.author}\n Genre: ${book.genre}\n Year: ${book.year}\n No. of Pages: ${book.numOfPages}`);
 }
-export { Book, displayBookInfo };
+export { Book };
